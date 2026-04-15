@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+		/>
+		<title>IGNITE FITNESS | Modern Gym & Studio</title>
+		<!-- Fonts & Icons -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="icon" type="image/x-icon" href="IMG/ignite.png" />
+		<script src="JS/script.js" defer></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container nav-container">
+				<div class="logo">IGNITE<span>FITNESS</span></div>
+				<button class="menu-toggle" id="menuToggle">
+					<i class="fas fa-bars"></i>
+				</button>
+				<nav class="nav-links" id="navLinks">
+					<a href="#home">Home</a>
+					<a href="#classes">Classes</a>
+					<a href="#trainers">Trainers</a>
+					<a href="#membership">Membership</a>
+					<a href="#gallery">Gallery</a>
+					<a href="#contact">Contact</a>
+					<a href="#blog">Blog</a>
+					<button
+						class="dark-toggle"
+						id="darkToggle"
+						aria-label="Dark mode toggle"
+					>
+						<i class="fas fa-moon"></i>
+					</button>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<!-- Hero Homepage -->
+			<section id="home" class="hero">
+				<div class="container hero-grid">
+					<div class="hero-content fade-in">
+						<h1>UNLEASH YOUR <span class="hero-highlight">POTENTIAL</span></h1>
+						<p>
+							Join the most energetic fitness community. World-class trainers,
+							group classes, and premium equipment.
+						</p>
+						<div style="display: flex; gap: 16px; flex-wrap: wrap">
+							<a href="#membership" class="btn">Become a member</a>
+							<a href="#classes" class="btn btn-outline">View classes</a>
+						</div>
+					</div>
+					<div class="hero-video">
+						<video
+							autoplay
+							muted
+							loop
+							playsinline
+							poster="IMG/ignite fitness 1.png"
+						>
+							<source
+								src="https://assets.mixkit.co/videos/preview/mixkit-woman-doing-push-ups-in-a-gym-42278-large.mp4"
+								type="video/mp4"
+							/>
+						</video>
+					</div>
+				</div>
+			</section>
+
+			<!-- Classes / Schedule with filters -->
+			<section id="classes" class="container" style="padding: 80px 0">
+				<h2 class="section-title">WEEKLY TIMETABLE</h2>
+				<div class="filter-bar">
+					<button class="filter-btn active" data-filter="all">
+						All Classes
+					</button>
+					<button class="filter-btn" data-filter="yoga">Yoga</button>
+					<button class="filter-btn" data-filter="hiit">HIIT</button>
+					<button class="filter-btn" data-filter="strength">Strength</button>
+					<button class="filter-btn" data-filter="spin">Spin</button>
+				</div>
+				<div class="schedule-grid" id="scheduleGrid"></div>
+			</section>
+
+			<!-- Trainers -->
+			<section id="trainers" class="container" style="padding: 60px 0">
+				<h2 class="section-title">ELITE TRAINERS</h2>
+				<div class="trainers-grid">
+					<div class="trainer-card">
+						<div
+							class="trainer-img"
+							style="
+								background-image: url(&quot;https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&fit=crop&quot;);
+							"
+						></div>
+						<div class="trainer-info">
+							<div class="trainer-name">MARCUS REED</div>
+							<p>Strength & Conditioning<br />NASM, CrossFit L2</p>
+						</div>
+					</div>
+					<div class="trainer-card">
+						<div
+							class="trainer-img"
+							style="
+								background-image: url(&quot;https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&fit=crop&quot;);
+							"
+						></div>
+						<div class="trainer-info">
+							<div class="trainer-name">LENA CHEN</div>
+							<p>Yoga & Mobility<br />RYT-500, Prenatal</p>
+						</div>
+					</div>
+					<div class="trainer-card">
+						<div
+							class="trainer-img"
+							style="
+								background-image: url(&quot;https://images.unsplash.com/photo-1550345332-09e3ac987658?w=400&fit=crop&quot;);
+							"
+						></div>
+						<div class="trainer-info">
+							<div class="trainer-name">DANTE HILL</div>
+							<p>HIIT & Boxing<br />ACE, USA Boxing</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Membership plans -->
+			<section id="membership" class="container" style="padding: 60px 0">
+				<h2 class="section-title">MEMBERSHIP PLANS</h2>
+				<div class="pricing-grid">
+					<div class="plan-card">
+						<h3>BASIC</h3>
+						<div class="plan-price">
+							$29<span style="font-size: 1rem">/mo</span>
+						</div>
+						<ul style="list-style: none; margin: 24px 0">
+							<li>✓ Gym access</li>
+							<li>✓ Locker rooms</li>
+							<li>✗ Classes</li>
+						</ul>
+						<a href="#" class="btn" style="padding: 12px 24px">Sign up</a>
+					</div>
+					<div class="plan-card featured">
+						<h3>PRO ⚡</h3>
+						<div class="plan-price">
+							$59<span style="font-size: 1rem">/mo</span>
+						</div>
+						<ul style="list-style: none; margin: 24px 0">
+							<li>✓ Unlimited classes</li>
+							<li>✓ Guest passes</li>
+							<li>✓ Nutrition consult</li>
+						</ul>
+						<a href="#" class="btn">Get started</a>
+					</div>
+					<div class="plan-card">
+						<h3>ELITE PT</h3>
+						<div class="plan-price">
+							$129<span style="font-size: 1rem">/mo</span>
+						</div>
+						<ul style="list-style: none; margin: 24px 0">
+							<li>✓ 4 PT sessions</li>
+							<li>✓ Body scan</li>
+							<li>✓ Custom meal plan</li>
+						</ul>
+						<a href="#" class="btn">Inquire</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Gallery / Facility -->
+			<section id="gallery" class="container" style="padding: 60px 0">
+				<h2 class="section-title">FACILITY TOUR</h2>
+				<div class="gallery-grid">
+					<div class="gallery-item">
+						<img
+							src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&fit=crop"
+							alt="Gym floor"
+						/>
+					</div>
+					<div class="gallery-item">
+						<img
+							src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=400&fit=crop"
+							alt="Studio"
+						/>
+					</div>
+					<div class="gallery-item">
+						<img
+							src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&fit=crop"
+							alt="Equipment"
+						/>
+					</div>
+					<div class="gallery-item">
+						<img
+							src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&fit=crop"
+							alt="Lounge"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Testimonials / Success Stories -->
+			<section class="container" style="padding: 60px 0">
+				<h2 class="section-title">TRANSFORMATIONS</h2>
+				<div class="testimonial-grid">
+					<div class="testimonial-card">
+						<div class="transformation">
+							<img
+								src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&fit=crop"
+								alt="before-after"
+							/>
+						</div>
+						<p>
+							"Lost 30 lbs in 4 months! The trainers are incredible." – Sarah J.
+						</p>
+					</div>
+					<div class="testimonial-card">
+						<div class="transformation">
+							<img
+								src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&fit=crop"
+								alt="client"
+							/>
+						</div>
+						<p>"Best HIIT classes, I'm stronger than ever." – Mike T.</p>
+					</div>
+					<div class="testimonial-card">
+						<video width="100%" controls style="border-radius: 16px">
+							<source
+								src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-43377-large.mp4"
+								type="video/mp4"
+							/>
+						</video>
+						<p>Watch David's 90-day journey.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Blog & Store (combined) -->
+			<section id="blog" class="container" style="padding: 60px 0">
+				<div
+					style="
+						display: flex;
+						justify-content: space-between;
+						align-items: baseline;
+					"
+				>
+					<h2 class="section-title">FUEL & GEAR</h2>
+					<a href="#" style="color: var(--accent-neon)">Shop supplements →</a>
+				</div>
+				<div class="blog-grid">
+					<div class="blog-card">
+						<img
+							src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&fit=crop"
+							alt="nutrition"
+							style="width: 100%; height: 200px; object-fit: cover"
+						/>
+						<div style="padding: 20px">
+							<h4>5 Pre-Workout Snacks</h4>
+							<p>Boost energy naturally.</p>
+						</div>
+					</div>
+					<div class="blog-card">
+						<img
+							src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&fit=crop"
+							alt="merch"
+							style="width: 100%; height: 200px; object-fit: cover"
+						/>
+						<div style="padding: 20px">
+							<h4>IgniteFit Hoodie</h4>
+							<p>$45 · Limited edition</p>
+							<a href="#" class="btn" style="padding: 8px 16px">Buy</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact & Location -->
+			<section id="contact" class="container" style="padding: 60px 0 40px">
+				<h2 class="section-title">FIND US</h2>
+				<div class="contact-grid">
+					<div class="map-container">
+						<iframe
+							title="map"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b2b5e3b0e5f!2sFitness%20Street!5e0!3m2!1sen!2sus!4v1610000000"
+							width="100%"
+							height="100%"
+							style="border: 0"
+							allowfullscreen=""
+							loading="lazy"
+						></iframe>
+					</div>
+					<div
+						style="
+							background: var(--card-bg);
+							padding: 30px;
+							border-radius: 30px;
+						"
+					>
+						<h3>📍 123 Muscle Ave, Metro City</h3>
+						<p><i class="fas fa-phone"></i> (555) 789-1234</p>
+						<p><i class="fas fa-envelope"></i> train@ignitefit.com</p>
+						<p><strong>Hours:</strong> Mon-Fri 5am–11pm, Sat-Sun 7am–9pm</p>
+						<div style="margin-top: 20px">
+							<a href="#"
+								><i
+									class="fab fa-instagram fa-2x"
+									style="margin-right: 20px; color: var(--accent-red)"
+								></i
+							></a>
+							<a href="#"
+								><i
+									class="fab fa-tiktok fa-2x"
+									style="margin-right: 20px; color: var(--accent-red)"
+								></i
+							></a>
+							<a href="#"
+								><i
+									class="fab fa-youtube fa-2x"
+									style="color: var(--accent-red)"
+								></i
+							></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer
+			style="
+				background: var(--bg-secondary);
+				padding: 30px 0;
+				margin-top: 40px;
+				text-align: center;
+				color: var(--text-secondary);
+			"
+		>
+			<div class="container">© 2025 IGNITE FITNESS. ALL RIGHTS RESERVED.</div>
+		</footer>
+	</body>
+</html>
